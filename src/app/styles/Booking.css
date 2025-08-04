@@ -1,0 +1,84 @@
+/* Booking Form CSS */
+.booking-form {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 35px 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+/* Shared input styles */
+.form-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #fafafa;
+  appearance: none; /* makes date/select inputs look consistent */
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 6px rgba(40, 167, 69, 0.4);
+  background-color: #fff;
+}
+
+.form-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover:not(:disabled) {
+  background-color: #218838;
+  transform: scale(1.01);
+}
+
+.form-button:disabled {
+  background-color: #b5b5b5;
+  color: #eee;
+  cursor: not-allowed;
+}
+
+/* Spinner centered inside button */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

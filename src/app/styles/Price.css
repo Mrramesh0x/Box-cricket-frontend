@@ -1,0 +1,83 @@
+.pricing-section {
+  padding: 30px 20px;
+  background: linear-gradient(to bottom, #fff 0%, #f7f7f7 100%);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.pricing-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.pricing-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.pricing-box {
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid #ff6b00;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.pricing-box:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-box h3 {
+  font-size: 30px;
+  color: #ff6b00;
+  margin-bottom: 15px;
+}
+
+.pricing-box p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.pricing-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.pricing-box ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pricing-box ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff6b00;
+}
+
+.pricing-button {
+  padding: 14px 32px;
+  font-size: 17px;
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-button:hover {
+  background-color: #e85d00;
+}

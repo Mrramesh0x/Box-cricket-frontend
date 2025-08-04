@@ -1,0 +1,68 @@
+.booking-success-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  padding: 20px;
+}
+
+.booking-success-card {
+  max-width: 420px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.booking-success-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.booking-success-message {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.booking-id {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.verification-info {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.back-home-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #ff6b00;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.back-home-button:hover {
+  background-color: #e55f00;
+}
+
+
+.estimated-time {
+  font-size: 16px;
+  color: #1e40af;
+  font-weight: 500;
+  margin-top: 10px;
+}

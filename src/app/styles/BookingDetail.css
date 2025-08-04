@@ -1,0 +1,111 @@
+.booking-details-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #f1fdf2;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.details-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.details-section p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.payment-section {
+  margin-top: 30px;
+}
+
+.payment-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 4px;
+}
+
+.upi-id {
+  font-size: 16px;
+  background-color: #e8f5e9;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upload-label {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.screenshot-input {
+  padding: 8px;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+  background-color: white;
+}
+
+
+.submit-button:hover {
+  background-color: #2e7d32;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 50px;
+}
+.submit-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #a4a4a4;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
