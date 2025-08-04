@@ -98,20 +98,25 @@ const BookingDetails = () => {
         <p className="upi-id">abc@ybl</p>
         <p className="upi-id">Total amount: {amount = member * 40}</p>
         <form className="payment-form">
-         <label htmlFor="screenshot" className="upload-label">
-  Upload Payment Screenshot
-</label>
+<div>
+  <label htmlFor="screenshot" className="upload-label">
+    Upload Payment Screenshot
+  </label>
 
-<input
-  type="file"
-  accept="image/*"
-  id="screenshot"
-  onChange={(e) => setFile(e.target.files[0])}
-  className="screenshot-input"
-  style={{ display: "none" }}
-  required
-/>
-
+  <input
+    type="file"
+    id="screenshot"
+    accept="image/*"
+    capture="environment"     // lets mobile open camera directly
+    onChange={(e) => {
+      if (e.target.files.length > 0) {
+        setFile(e.target.files[0]);
+      }
+    }}
+    style={{ display: "none" }}
+    required
+  />
+</div>
 {status}
           <button
             type="submit"
