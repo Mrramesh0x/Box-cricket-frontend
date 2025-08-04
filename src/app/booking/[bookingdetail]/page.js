@@ -98,17 +98,20 @@ const BookingDetails = () => {
         <p className="upi-id">abc@ybl</p>
         <p className="upi-id">Total amount: {amount = member * 40}</p>
         <form className="payment-form">
-          <label htmlFor="screenshot" className="upload-label">
-            Upload Payment Screenshot
-          </label>
-          <input
-            type="file"
-            accept="image/*"
-            id="screenshot"
-            onChange={(e) => setFile(e.target.files[0])}
-            className="screenshot-input"
-            required
-          />
+         <label htmlFor="screenshot" className="upload-label">
+  Upload Payment Screenshot
+</label>
+
+<input
+  type="file"
+  accept="image/*"
+  id="screenshot"
+  onChange={(e) => setFile(e.target.files[0])}
+  className="screenshot-input"
+  style={{ display: "none" }}
+  required
+/>
+
 {status}
           <button
             type="submit"
