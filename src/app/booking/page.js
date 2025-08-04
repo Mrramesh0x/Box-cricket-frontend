@@ -32,7 +32,7 @@ const Booking = () => {
     setLoading(true);
 
     setTimeout(async () => {
-      const response = await axios.post("http://localhost:4000/api/sendname", {
+      const response = await axios.post("https://box-cricket-backend-zbef.onrender.com/api/sendname", {
         name,
         number,
         date,

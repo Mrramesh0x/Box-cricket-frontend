@@ -55,7 +55,7 @@ const BookingDetails = () => {
 
       const cloudData = cloudRes.data;
       if (cloudData.secure_url) {
-        const response = await axios.post("http://localhost:4000/api/sendslip", {
+        const response = await axios.post("https://box-cricket-backend-zbef.onrender.com/api/sendslip", {
           imageUrl: cloudData.secure_url,
           name,
           number,
