@@ -99,18 +99,15 @@ const BookingDetails = () => {
         <p className="upi-id">Total amount: {amount = member * 40}</p>
         <form className="payment-form">
 <label htmlFor="screenshot" className="upload-label">
-  Upload Payment Screenshot
+  📷 Upload Payment Screenshot
 </label>
 
 <input
   type="file"
   accept="image/*"
   id="screenshot"
-  onChange={(e) => {
-    const selected = e.target.files?.[0];
-    if (selected) setFile(selected);
-  }}
-  style={{ display: "none" }}
+  onChange={(e) => setFile(e.target.files[0])}
+  className="screenshot-input"
   required
 />
 
