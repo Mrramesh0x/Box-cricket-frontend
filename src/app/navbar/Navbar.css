@@ -42,3 +42,43 @@
 .navbar-link:hover {
   color: #007bff;
 }
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    margin-top: 12px;
+    padding: 12px 0;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    padding: 8px 16px;
+    justify-content: center;
+  }
+
+  .navbar-link {
+    font-size: 16px;
+  }
+}

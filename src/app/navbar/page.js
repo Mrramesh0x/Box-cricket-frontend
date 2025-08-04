@@ -1,11 +1,19 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-title">BOXCRICKET</div>
-      <ul className="navbar-menu">
+
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        &#9776;
+      </div>
+
+      <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
         <li className="navbar-item"><a href="/" className="navbar-link">Home</a></li>
         <li className="navbar-item"><a href="howitworks" className="navbar-link">How It Works</a></li>
         <li className="navbar-item"><a href="price" className="navbar-link">Pricing</a></li>
