@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import './Navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
