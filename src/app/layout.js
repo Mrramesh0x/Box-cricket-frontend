@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import '.styles/Navbar.css';
+import '.styles/Navbar.css';
 import './styles/Herosection.css'; 
 import './styles/Booking.css'; 
 import "./styles/BookingDetail.css"
