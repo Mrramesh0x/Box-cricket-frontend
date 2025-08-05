@@ -6,36 +6,51 @@
   overflow: hidden;
 }
 
+/* 📸 Blurred background image */
 .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  filter: brightness(60%) blur(1px); /* Dark + blurred effect */
+  filter: blur(4px) brightness(0.8);
+  z-index: 0;
 }
 
-/* Text box on top of image */
-.hero-content {
+/* Overlay tint if needed (optional) */
+.hero-container::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+}
+
+/* 🧾 Content box (NOT blurred) */
+.hero-content {
+  position: relative;
   z-index: 2;
   text-align: center;
   padding: 24px;
   border-radius: 12px;
   max-width: 90%;
   width: 100%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 
-  /* ✨ Glassmorphism effect */
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* 🧊 Light black background with transparency */
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Heading and paragraph */
+/* Text styles */
 .hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 12px;
@@ -46,7 +61,7 @@
   margin-bottom: 20px;
 }
 
-/* Yellow CTA button */
+/* Yellow button */
 .hero-button {
   background-color: #ffc107;
   color: #000;
@@ -63,10 +78,14 @@
   background-color: #e0a800;
 }
 
-/* 📱 Responsive for Mobile */
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
   .hero-container {
     height: 75vh;
+  }
+
+  .hero-content {
+    padding: 16px;
   }
 
   .hero-content h1 {
@@ -78,7 +97,7 @@
   }
 
   .hero-button {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 10px 20px;
   }
 }
