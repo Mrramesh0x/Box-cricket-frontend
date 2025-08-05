@@ -75,7 +75,7 @@ const Booking = () => {
       <input
         type="tel"
         name="number"
-        placeholder="Mobile Number"
+        placeholder="WhatsApp Number"
         value={number}
         onChange={(e) => setNumber(e.target.value)}
         className="form-input"
@@ -87,6 +87,7 @@ const Booking = () => {
         type="date"
         name="date"
         value={date}
+        placeholder="Select Date"
         onChange={(e) => setDate(e.target.value)}
         className="form-input"
         required
@@ -101,8 +102,8 @@ const Booking = () => {
       >
         <option value="">Select Total Members</option>
         {Array.from({ length: 18 }, (_, i) => (
-          <option key={i + 11} value={i + 11}>
-            {i + 11} Member{i + 11 > 1 ? "s" : ""}
+          <option key={i + 12} value={i + 12}>
+            {i + 12} Member{i + 12 > 1 ? "s" : ""}
           </option>
         ))}
       </select>

@@ -6,9 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <a href="/" className="navbar-title" style={{ textDecoration: "none" }}>
-  BOXCRICKET
-</a>
+      <a href="/" className="navbar-title">BOXCRICKET</a>
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         &#9776;
       </div>

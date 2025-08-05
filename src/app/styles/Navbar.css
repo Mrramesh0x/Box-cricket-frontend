@@ -42,6 +42,9 @@
 .navbar-link:hover {
   color: #007bff;
 }
+a{
+  text-decoration: none;
+}
 /* Hamburger Icon */
 .hamburger {
   display: none;
