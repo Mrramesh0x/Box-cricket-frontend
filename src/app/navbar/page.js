@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-title">BOXCRICKET</div>
+      <a href="/" className="navbar-title">BOXCRICKET</a>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         &#9776;
