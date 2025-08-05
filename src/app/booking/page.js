@@ -7,10 +7,11 @@ const Booking = () => {
   const router = useRouter();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const [date, setDate] = useState("");
   const [timeslot, setTimeSlot] = useState("");
   const [member, setTotalMember] = useState("");
   const [loading, setLoading] = useState(false);
+  const today = new Date().toISOString().split("T")[0];
+const [date, setDate] = useState(today);
 
   const timeSlots = [
     "10:00 AM – 11:00 AM",
@@ -83,9 +84,7 @@ const Booking = () => {
         pattern="[0-9]{10}"
       />
 
-   {/* ✅ Date Input: Replace placeholder with label (placeholder won’t work on mobile) */}
-<label htmlFor="date" className="form-label">Select Date</label>
-<input
+ <input
   type="date"
   id="date"
   name="date"
@@ -93,7 +92,9 @@ const Booking = () => {
   onChange={(e) => setDate(e.target.value)}
   className="form-input"
   required
+  min={new Date().toISOString().split("T")[0]} // ⛔ prevents selecting past
 />
+
 
 {/* ✅ Member Select: Limit from 12 to 22 members only */}
 <select
