@@ -35,15 +35,15 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 24px;
+  padding: 24px 32px;
   border-radius: 12px;
-  max-width: 90%;
-  width: 100%;
+  max-width: 600px;          /* ✅ limit width on large screens */
+  width: 90%;                /* ✅ responsive on small screens */
   margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
 
-  /* 🧊 Light black background with transparency */
+  /* 🧊 Light black semi-transparent background */
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
 
