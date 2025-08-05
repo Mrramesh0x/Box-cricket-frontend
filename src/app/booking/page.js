@@ -83,30 +83,34 @@ const Booking = () => {
         pattern="[0-9]{10}"
       />
 
-      <input
-        type="date"
-        name="date"
-        value={date}
-        placeholder="Select Date"
-        onChange={(e) => setDate(e.target.value)}
-        className="form-input"
-        required
-      />
+   {/* ✅ Date Input: Replace placeholder with label (placeholder won’t work on mobile) */}
+<label htmlFor="date" className="form-label">Select Date</label>
+<input
+  type="date"
+  id="date"
+  name="date"
+  value={date}
+  onChange={(e) => setDate(e.target.value)}
+  className="form-input"
+  required
+/>
 
-      <select
-        name="member"
-        value={member}
-        onChange={(e) => setTotalMember(e.target.value)}
-        className="form-input"
-        required
-      >
-        <option value="">Select Total Members</option>
-        {Array.from({ length: 18 }, (_, i) => (
-          <option key={i + 12} value={i + 12}>
-            {i + 12} Member{i + 12 > 1 ? "s" : ""}
-          </option>
-        ))}
-      </select>
+{/* ✅ Member Select: Limit from 12 to 22 members only */}
+<select
+  name="member"
+  value={member}
+  onChange={(e) => setTotalMember(e.target.value)}
+  className="form-input"
+  required
+>
+  <option value="">Select Total Members</option>
+  {Array.from({ length: 11 }, (_, i) => (
+    <option key={i + 12} value={i + 12}>
+      {i + 12} Member{i + 12 > 1 ? "s" : ""}
+    </option>
+  ))}
+</select>
+
 
       <select
         name="timeslot"

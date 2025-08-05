@@ -77,6 +77,14 @@
   animation: spin 1s linear infinite;
 }
 
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
